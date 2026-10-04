@@ -1,0 +1,8 @@
+{
+  "name": "yidian-self-discipline",
+  "version": "1.0.0",
+  "private": true,
+  "description": "一点：适合安卓手机的每日自律与习惯打卡 PWA",
+  "scripts": { "start": "node serve.js", "test": "node --test tests/core.test.cjs" },
+  "engines": { "node": ">=18" }
+}

@@ -1,0 +1,7 @@
+node_modules/
+test-results/
+*.log
+DESIGN.md
+.deployment/
+_site/
+*.backup.json

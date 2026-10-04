@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f5f6f0">
+  <meta name="description" content="一点：每天做成几件小事。自由管理习惯，记录进步，不必追求满分。">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/icon-192.png">
+  <link rel="stylesheet" href="styles.css">
+  <title>一点 · 每天向前一点</title>
+  <script src="core.js" defer></script>
+  <script src="execution.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#today" aria-label="一点，返回今日"><span class="brand-mark">一<span>·</span></span><span><strong>一点</strong><small>LITTLE BY LITTLE</small></span></a>
+      <div class="sidebar-intro">把日子过成<br>自己喜欢的样子。</div>
+      <nav class="desktop-nav" aria-label="主导航"></nav>
+      <div class="sidebar-bottom"><span class="tiny-leaf">✦</span><p>不急着成为更好的自己，<br>先照顾好今天的自己。</p><small>每一小步，都算数。</small></div>
+    </aside>
+    <div class="workspace">
+      <header class="mobile-header"><a href="#today" class="brand"><span class="brand-mark">一<span>·</span></span><strong>一点</strong></a><button class="icon-button" data-action="settings" aria-label="打开设置" id="header-settings"></button></header>
+      <div id="storage-warning" class="notice warning" hidden></div>
+      <main id="main" tabindex="-1"></main>
+      <footer class="page-footer">一点一滴，自有回响 <span>✦</span></footer>
+    </div>
+    <nav class="bottom-nav" aria-label="手机主导航"></nav>
+  </div>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <dialog id="task-dialog" class="modal"><form id="task-form"></form></dialog>
+  <dialog id="execution-dialog" class="modal execution-modal"><div id="execution-content"></div></dialog>
+  <dialog id="confirm-dialog" class="modal compact"><form id="confirm-form"><div id="confirm-content"></div><div class="form-actions"><button type="button" class="button secondary" data-action="cancel-confirm">取消</button><button type="submit" class="button danger" id="confirm-submit">确认</button></div></form></dialog>
+  <input id="import-file" type="file" accept="application/json,.json" hidden>
+  <noscript><div class="notice">请开启浏览器 JavaScript 后使用一点。</div></noscript>
+</body>
+</html>
